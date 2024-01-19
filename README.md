@@ -97,7 +97,7 @@ I developed this website from scratch.
 ---
 ## Credits
 
- The excellent staff at UC Berkeley Extension Full Stack Bootcamp provided the basic file structure with a Develop folder containing db & public folders as well as a package.json file. Also provided were a db.json file to serve as the data base location, and the entire front end html, css and javascript were provided in the public folder. Also, I copied open source badges from Vedant Chainani at the website https://dev.to/envoy_/150-badges-for-github-pnk#contents 
+ The excellent staff at UC Berkeley Extension Full Stack Bootcamp provided the basic file structure with a Develop folder containing db & public folders as well as a package.json file. Also provided were a db.json file to serve as the data base location. The entire front end html, css and javascript were provided in the public folder. Also, I copied open source badges from Vedant Chainani at the website https://dev.to/envoy_/150-badges-for-github-pnk#contents 
  
 ---
 
