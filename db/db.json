@@ -1,6 +1,26 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title": "Test Title",
+        "text": "Test text"
+    },
+    {
+        "title": "New Note",
+        "text": "This is a new note",
+        "id": "29498306-10b3-4ecf-9ea6-f2ccbfdb1af6"
+    },
+    {
+        "title": "ANother new note",
+        "text": "This note has too many capital letters",
+        "id": "68fa9763-296e-4acb-a289-6c92aee5bd3f"
+    },
+    {
+        "title": "WHat will this note say?",
+        "text": "You should know- You wrote it",
+        "id": "276fcb80-da2d-48fa-8e3f-1474a11b3f9f"
+    },
+    {
+        "title": "Now we will try yet another",
+        "text": "It won't say much either",
+        "id": "8e1b3441-683e-4dbd-b8d6-45f95beb6826"
     }
 ]
