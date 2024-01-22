@@ -1,6 +1,11 @@
 // Routes.index
 //Import express and call the Router method
 const router = require('express').Router();
+//require npm uuid to for a unique ID
+const uuid = require('uuid');
+//require utility file to get and addend onbjects from database
+const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
+
 // GET Route for retrieving notes
 router.get('/notes', (req, res) => {
     console.info(`${req.method} request received for notes`);
