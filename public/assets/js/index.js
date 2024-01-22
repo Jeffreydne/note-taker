@@ -1,3 +1,4 @@
+// public/js/index.js
 let noteForm;
 let noteTitle;
 let noteText;
