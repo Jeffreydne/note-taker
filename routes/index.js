@@ -2,7 +2,7 @@
 //Import express and call the Router method
 const router = require('express').Router();
 //require npm uuid to for a unique ID
-const uuid = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 //require utility file to get and addend onbjects from database
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 
@@ -21,8 +21,8 @@ router.post('/notes', (req, res) => {
     if (req.body) {
       const newNote = {
         title,
-        text
-        // tip_id: uuid(),
+        text,
+        note_id: uuidv4(),
       };
   
       readAndAppend(newNote, '../db/db.json');
