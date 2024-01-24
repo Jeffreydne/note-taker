@@ -3,19 +3,35 @@
 const router = require('express').Router();
 //require npm uuid to for a unique ID
 const { v4: uuidv4 } = require('uuid');
-//require utility file to get and addend onbjects from database
-const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
-
+//require utility file to get and addend onbjects from database, and require fs for router.delete
+const { readFromFile, writeToFile,readAndAppend } = require('../helpers/fsUtils');
+const fs = require('fs');
+// declare note variable
+let note;
 // GET Route for retrieving notes
 router.get('/notes', (req, res) => {
     console.info(`${req.method} request received for notes`);
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
   });
 // Delete Route to delete a note
-router.delete('/notes:id', (req,res) => {
-  // console.info(`${req.method} request received to delete a note`);
-  console.log(res);
-  return res;
+router.delete('/notes/:id', (req,res) => {
+  
+  console.info(`${req.method} request received to delete a note`);
+  fs.readFile('./db/db.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+    } else {
+      const parsedData = JSON.parse(data);
+      console.log(req.params.id);
+      const index = parsedData.findIndex((item) => item.id === req.params.id);
+      console.log(index);
+      parsedData.splice(index, 1);
+      writeToFile('./db/db.json', parsedData);
+      res.send('Deleted');
+    }
+  });
+  // console.log(res);
+  // return res;
 })
 // .then((res) => {
 //   if (!res.ok) {

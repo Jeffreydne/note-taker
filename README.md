@@ -65,6 +65,8 @@ The below Javascript example shows
 
 This website is designed to allow a user to create a note with a headline and a body. With the click of a button that information can be stored in the cloud allowing for easy retireval to help the user remember important information. Just as easily the note can be deleted when no longer needed.
 
+![ alt text](./Assets/img/note-taker-screenshot.png)
+
 ---
 
 ## Learning Points
