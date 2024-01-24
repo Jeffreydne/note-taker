@@ -6,8 +6,7 @@ const { v4: uuidv4 } = require('uuid');
 //require utility file to get and addend onbjects from database, and require fs for router.delete
 const { readFromFile, writeToFile,readAndAppend } = require('../helpers/fsUtils');
 const fs = require('fs');
-// declare note variable
-let note;
+
 // GET Route for retrieving notes
 router.get('/notes', (req, res) => {
     console.info(`${req.method} request received for notes`);
@@ -30,17 +29,9 @@ router.delete('/notes/:id', (req,res) => {
       res.send('Deleted');
     }
   });
-  // console.log(res);
-  // return res;
+ 
 })
-// .then((res) => {
-//   if (!res.ok) {
-//     throw new Error(`HTTP error! Status: ${res.status}`);
-//   }
-// })
-// .catch((error) => {
-//   console.error('Error deleting object:', error.message);
-// });
+
 // POST Route for a new note
 router.post('/notes', (req, res) => {
     console.info(`${req.method} request received to add a note`);
@@ -61,5 +52,5 @@ router.post('/notes', (req, res) => {
     }
   });
 
-// TODO: Export app
+// Export
 module.exports = router;
