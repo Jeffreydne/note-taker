@@ -31,7 +31,7 @@ An app that allows the user to create and delete notes that are stored in a data
 
 [Visit the site deployed on Render Cloud Hosting Service](https://free-note-taker.onrender.com/)
 
-[Visit the Github repository](https://github.com/Jeffreydne/logoMakerSVG)
+[Visit the Github repository](https://github.com/Jeffreydne/note-taker)
 
 This application alows a user to create and delete notes and store them in the cloud.  
 
